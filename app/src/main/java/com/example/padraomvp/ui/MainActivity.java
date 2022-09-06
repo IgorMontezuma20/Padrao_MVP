@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements AppView{
         });
 
         //Instanciando o Presenter
+        //O Presenter é a ponte entre a View e a Model, ele que irá solicitar as informações
         presenter = new Presenter(this);
 
     }
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements AppView{
 
     }
 
+    //Método para setar o texto no TextView
     @Override
     public void onGetAppName(String name) {
         textView.setText(name);
